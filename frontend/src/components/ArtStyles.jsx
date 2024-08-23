@@ -17,7 +17,7 @@ export default function ArtStyles() {
 
     return (
         <div>
-            <h1>Sunflower Art Styles</h1>
+            <h1>Chinese Art Styles</h1>
             <div>
                 {artStyles.map((style, index) => (
                     <div key={index}>
