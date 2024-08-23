@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ArtStyles from './components/ArtStyles';
 import Navbar from './components/Navbar';
-import List from './components/List';
 import Map from './components/Map';
+import Carousel from './components/Carousel';
 
 export default function App() {
     return (
@@ -11,9 +10,8 @@ export default function App() {
             <Navbar />
             <>
                 <Routes>
-                    {/* <Route path="/" element={<ArtStyles />} /> */}
                     <Route path="/" element={<Map />} />
-                    <Route path="/art/:region" element={<List />} />
+                    <Route path="/art/:region" element={<Carousel />} />
                 </Routes>
             </>
         </Router>
