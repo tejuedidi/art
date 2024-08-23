@@ -24,7 +24,6 @@ def art(request, region):
             'artist': object_response.get('artistDisplayName', 'Unknown artist'),
             'image': object_response.get('primaryImageSmall', None),
             'date': object_response.get('objectDate', 'Date unknown'),
-            'description': object_response.get('description', 'No description available'),
         })
         
     return JsonResponse(details, safe=False)

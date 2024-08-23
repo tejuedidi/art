@@ -1,0 +1,20 @@
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.leaflet-container {
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.leaflet-tooltip {
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #333;
+}
