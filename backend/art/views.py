@@ -19,11 +19,13 @@ def art(request, region):
         object_url = f'https://collectionapi.metmuseum.org/public/collection/v1/objects/{obj_id}'
         object_response = requests.get(object_url).json()
         
-        details.append({
-            'title': object_response.get('title', 'No title available'),
-            'artist': object_response.get('artistDisplayName', 'Unknown artist'),
-            'image': object_response.get('primaryImageSmall', None),
-            'date': object_response.get('objectDate', 'Date unknown'),
-        })
+        image_url = object_response.get('primaryImageSmall', None) # if primary image only
+        if image_url:
+            details.append({
+                'title': object_response.get('title', 'No title available'),
+                'artist': object_response.get('artistDisplayName', 'Unknown artist'),
+                'image': image_url,
+                'date': object_response.get('objectDate', 'Date unknown'),
+            })
         
     return JsonResponse(details, safe=False)
